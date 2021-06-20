@@ -34,6 +34,7 @@ const processImages = async ({
   images = [],
   widths = defaultWidths,
   scales = defaultScales,
+  plugin = {},
   s3,
   debug,
 }) => {
@@ -365,6 +366,7 @@ const plugin = {
             images: plugin.imagesToProcess,
             widths,
             scales,
+            plugin,
             s3: plugin.config.s3,
             debug: plugin.config.debug,
           });
