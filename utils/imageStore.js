@@ -35,7 +35,7 @@ const imageStore = (manifest, plugin) => {
         if (file.format === 'jpeg') picture += sources.jpeg.reduce((out, cv) => `${out}${cv}`, '');
         if (file.format === 'png') picture += sources.png.reduce((out, cv) => `${out}${cv}`, '');
 
-        const fallbackImage = file.sizes.find((fileObj) => fileObj.format === 'png');
+        const fallbackImage = file.sizes.find((fileObj) => fileObj.format === file.format);
 
         // picture += `<img src="${file.placeholder}"${alt.length > 0 ? ` alt="${alt}"` : ''} class="lazy blur-up">`;
 
